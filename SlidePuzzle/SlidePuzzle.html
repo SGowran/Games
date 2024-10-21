@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cute Slide Puzzle</title>
+    <link rel="stylesheet" href="SlidePuzzle.css">
+</head>
+
+<body>
+    <!-- title -->
+    <img id="titleImage" src="assests/SanrioTitle.jpg">
+    <div id="board"></div>
+    <h1>Turns: <span id="turns">0</span></h1>
+
+    <!-- start menu -->
+    <div id="startMenu">
+        <div class="dropdown">
+            <label for="difficulty">Choose Difficulty:</label>
+            <select id="difficulty">
+                <div class="dropdown-content">
+                    <option value="normal">Normal</option>
+                    <option value="difficult">Difficult</option>
+                    <option value="test">Test</option>
+                </div>
+            </select>
+            <button id="newGameBtn" class="button">New Game</button>
+            <button id="continueGameBtn" class="button" style="display: none;">Continue Game</button>
+            <button id="saveGameBtn" class="button" style="display: none;">Save Game</button>
+        </div>
+    </div>
+
+    <div id="gameBoard" style="display: none;">
+        <div id="board"></div>
+        <h2>Turns: <span id="turns">0</span></h2>
+    </div>
+
+    <script src="SlidePuzzle.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,156 @@
+* {
+    cursor: url("assests/kuromiCursor2.png") 2 2, auto;
+}
+
+body {
+    font-family: Arial;
+    text-align: center;
+    color: white;
+}
+
+h1,
+h2 {
+    color: pink;
+}
+
+#titleImage {
+    max-width: 360px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+#board {
+    width: 354px;
+    height: 354px;
+    background-color: pink;
+    border: 30px solid;
+    margin: 5px auto 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+#board img {
+    width: 118px;
+    height: 118px;
+    border: 1px solid pink;
+    box-sizing: border-box;
+}
+
+/* Style Buttons ------------------------------------*/
+.button {
+    background-color: white;
+    border: 2px solid pink;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+    transition-duration: 0.4s;
+}
+
+.button:hover {
+    background-color: pink;
+    color: white;
+}
+
+
+/* Style The Dropdown Button ------------------------ */
+#difficulty {
+    background-color: white;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: 2px solid pink;
+    border-radius: 8px;
+}
+
+/* dropdown div */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content-----------------------------------*/
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: pink;
+}
+
+
+@media print {
+
+    /* Hide unnecessary elements during printing */
+    #startMenu,
+    #turns,
+    #saveGameBtn,
+    #newGameBtn,
+    #continueGameBtn,
+    #onclick {
+        display: none;
+    }
+
+    #board {
+        width: 354px;
+        height: 354px;
+        background-color: pink;
+        border: 10px solid;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #board img {
+        width: 118px;
+        height: 118px;
+        border: 1px solid pink;
+    }
+
+
+    #solvedMessage {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        border: 2px solid black;
+        padding: 20px;
+        text-align: center;
+        z-index: 100;
+    }
+
+    #solvedMessage button {
+        margin: 10px;
+        padding: 10px;
+        font-size: 16px;
+        color: pink;
+    }
+}
